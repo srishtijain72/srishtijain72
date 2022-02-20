@@ -1,0 +1,43 @@
+        void merge(long long arr1[], long long arr2[], int n, int m) 
+        { 
+            // code here 
+            // int i,j,temp;
+            // for(i=0;i<m;i++)
+            // {
+            //     for(j=0;j<n;j++)
+            //     {
+            //         if(arr1[j]>arr2[i])
+            //         {
+            //          swap(arr1[j],arr2[i]);
+            //         }
+            //     }
+            // }
+            // sort(arr2,arr2+m);
+             int f = n -1;
+
+            int l = 0;
+
+            while(f >= 0 && l < m)
+
+            {
+
+                if(arr1[f] >= arr2[l])
+
+                {
+
+                    swap(arr1[f], arr2[l]);
+
+                }
+
+                f--;
+
+                l++;
+
+            }   
+
+            sort(arr1, arr1 + n);
+
+            sort(arr2, arr2 + m);
+            
+        } 
+};
